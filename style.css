@@ -4,32 +4,32 @@ html, body {
     overflow: auto;
     display: flex;
     flex-direction: column;
-    background-color: #f0f0f5; /* Màu nền nhẹ nhàng cho toàn bộ trang */
-    font-family: 'Roboto', sans-serif; /* Font chữ hiện đại và dễ đọc */
-    color: #333; /* Màu chữ chính */
+    background-color: #f0f0f5;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
 }
 
 .container {
     text-align: center;
-    background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Hiệu ứng gradient nhẹ cho container */
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
     padding: 20px;
-    border-radius: 15px; /* Bo tròn góc container */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng mềm mại */
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     max-width: 90%;
     margin: 20px auto;
     flex-grow: 1;
-    transition: transform 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
+    transition: transform 0.3s ease;
 }
 
 .container:hover {
-    transform: scale(1.02); /* Phóng to nhẹ khi hover */
+    transform: scale(1.02);
 }
 
 h1 {
-    color: #4A90E2; /* Màu xanh tươi sáng cho tiêu đề */
+    color: #4A90E2;
     font-size: 2.5em;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng cho chữ */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 p {
@@ -38,6 +38,104 @@ p {
 }
 
 input {
-    padding: 8px;
+    padding: 10px; /* Đảm bảo padding phù hợp để khung nhập liệu trông đẹp hơn */
     font-size: 16px;
-    margin: 
+    margin: 10px 0;
+    width: 200px; /* Căn chỉnh chiều rộng của ô nhập liệu và nút */
+    border: 2px solid #4A90E2;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #007bff;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 200px; /* Đảm bảo chiều rộng của nút bằng với ô nhập liệu */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button#startButton {
+    background-color: #4CAF50; /* Màu xanh lá cây cho nút "Bắt Đầu" */
+    color: #fff;
+}
+
+button#startButton:hover {
+    background-color: #45A049; /* Màu đậm hơn khi hover */
+}
+
+button#guessButton {
+    background-color: #f44336; /* Màu đỏ cho nút "Gửi Dự Đoán" */
+    color: #fff;
+}
+
+button#guessButton:hover {
+    background-color: #d32f2f; /* Màu đậm hơn khi hover */
+}
+
+.credit {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    margin: 10px 0;
+    flex-shrink: 0;
+}
+
+.credit a {
+    color: #4A90E2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.credit a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.history {
+    margin: 20px 0;
+    text-align: left;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.history h2 {
+    font-size: 18px;
+    color: #4A90E2;
+    margin-bottom: 10px;
+}
+
+.history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.history li {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.history li:hover {
+    background-color: #e6e6e6;
+}
