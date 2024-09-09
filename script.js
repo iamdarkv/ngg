@@ -106,7 +106,7 @@ function makeGuess() {
         document.getElementById('result').innerText = `Chúc mừng! Bạn đã đoán đúng số: ${secretNumber}.\n${resultText}`;
         document.getElementById('attempts').innerText = `Số lần đoán: ${attempts}`;
     } else {
-        document.getElementById('result').innerText = `Chữ số đúng vị trí: ${correctPosition}\nChữ số đúng nhưng không đúng vị trí: ${correctDigit}`;
+        document.getElementById('result').innerText = `Chữ số đúng vị trí: ${correctPosition}\nChữ số đúng nhưng sai vị trí: ${correctDigit}`;
         document.getElementById('attempts').innerText = `Số lần đoán: ${attempts}`;
     }
 
