@@ -91,8 +91,8 @@ function makeGuess() {
     if (correctPosition === numberLength) {
         // Hiển thị kết quả trò chơi với xuống dòng
         const resultText = attempts > maxAttempts 
-            ? 'Bạn đã đoán nhiều lần hơn DarkV, thật là tiếc.' 
-            : 'Bạn đã chơi giỏi hơn DarkV, thật tuyệt vời!';
+            ? 'Bạn đã đoán nhiều lần hơn DarkV, quá non.' 
+            : 'Bạn đã chơi giỏi hơn DarkV, wow thật tuyệt vời!';
 
         document.getElementById('result').innerText = `Chúc mừng! Bạn đã đoán đúng số: ${secretNumber}.\n${resultText}`;
         document.getElementById('attempts').innerText = `Số lần đoán: ${attempts}`;
