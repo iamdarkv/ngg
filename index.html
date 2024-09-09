@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trò Chơi Đoán Số</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Trò Chơi Đoán Số</h1>
+        <p>Nhập độ dài của số cần đoán (ví dụ: 4 cho số 4 chữ số):</p>
+        <input type="number" id="length" min="1" />
+        <button onclick="startGame()">Bắt Đầu</button>
+
+        <div id="gameSection" style="display: none;">
+            <p>Hãy đoán số có độ dài <span id="numberLength"></span> chữ số:</p>
+            <input type="text" id="guess" />
+            <button onclick="makeGuess()">Gửi Dự Đoán</button>
+
+            <div id="history" class="history">
+                <h2>Lịch Sử Dự Đoán</h2>
+                <ul id="historyList"></ul>
+            </div>
+
+            <p id="result"></p>
+            <p id="attempts"></p>
+        </div>
+    </div>
+
+    <div class="credit">
+        <p><a href="https://your-website-link.com" target="_blank">DarkV</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
