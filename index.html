@@ -10,12 +10,12 @@
 <body>
     <div class="container">
         <h1>Trò Chơi Đoán Số</h1>
-        <p>Nhập độ dài của số cần đoán (ví dụ: 4 cho số 4 chữ số):</p>
+        <p>Nhập số chữ số của số cần đoán (ví dụ: 4 cho số 4 chữ số):</p>
         <input type="number" id="length" min="1" />
         <button onclick="startGame()">Bắt Đầu</button>
 
         <div id="gameSection" style="display: none;">
-            <p>Hãy đoán số có độ dài <span id="numberLength"></span> chữ số:</p>
+            <p>Hãy đoán số có <span id="numberLength"></span> chữ số:</p>
             <input type="text" id="guess" />
             <button onclick="makeGuess()">Gửi Dự Đoán</button>
 
