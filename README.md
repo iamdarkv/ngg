@@ -1,1 +1,1 @@
-ngg
+https://iamdarkv.github.io/ngg/
