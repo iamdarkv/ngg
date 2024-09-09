@@ -8,6 +8,7 @@ body {
     height: 100vh;
     margin: 0;
     flex-direction: column; /* Thay đổi hướng của body để phần credit nằm dưới cùng */
+    font-size: 14px; /* Giảm kích thước font của toàn bộ trang */
 }
 
 .container {
@@ -19,14 +20,15 @@ body {
 }
 
 input {
-    padding: 10px;
-    font-size: 14px;
+    padding: 5px; /* Giảm padding để thu nhỏ kích thước ô nhập */
+    font-size: 14px; /* Giảm kích thước font của ô nhập */
     margin: 10px 0;
+    width: 100px; /* Giảm chiều rộng của ô nhập */
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 14px;
+    padding: 8px 16px; /* Giảm padding để thu nhỏ kích thước button */
+    font-size: 14px; /* Giảm kích thước font của button */
     border: none;
     background-color: #007bff;
     color: #fff;
@@ -41,7 +43,7 @@ button:hover {
 .credit {
     margin-top: 20px;
     text-align: center;
-    font-size: 12px;
+    font-size: 12px; /* Giảm kích thước font trong phần credit */
     color: #666;
 }
 
@@ -60,7 +62,7 @@ button:hover {
 }
 
 .history h2 {
-    font-size: 16px;
+    font-size: 16px; /* Giảm kích thước font trong phần lịch sử dự đoán */
     margin-bottom: 10px;
 }
 
