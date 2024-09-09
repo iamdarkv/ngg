@@ -38,9 +38,18 @@ function startGame() {
 
 function generateRandomNumber(length) {
     let number = '';
-    for (let i = 0; i < length; i++) {
-        number += Math.floor(Math.random() * 10);
+    
+    // Đảm bảo chữ số đầu tiên không phải là số 0 nếu độ dài lớn hơn 1
+    if (length > 1) {
+        number += Math.floor(Math.random() * 9) + 1; // Chữ số đầu tiên từ 1 đến 9
+        length--; // Giảm độ dài xuống vì đã thêm một chữ số đầu tiên
     }
+    
+    // Tạo các chữ số tiếp theo
+    for (let i = 0; i < length; i++) {
+        number += Math.floor(Math.random() * 10); // Thêm các chữ số từ 0 đến 9
+    }
+    
     return number;
 }
 
@@ -104,4 +113,3 @@ function makeGuess() {
     // Xóa ô nhập dự đoán sau khi gửi
     guessInput.value = '';
 }
-
