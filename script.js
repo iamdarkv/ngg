@@ -89,12 +89,12 @@ function makeGuess() {
     historyList.appendChild(historyItem);
 
     if (correctPosition === numberLength) {
-        // Hiển thị kết quả trò chơi
+        // Hiển thị kết quả trò chơi với xuống dòng
         const resultText = attempts > maxAttempts 
-            ? 'Bạn đã đoán nhiều lần hơn DarkV, thật là tiếc...' 
+            ? 'Bạn đã đoán nhiều lần hơn DarkV, thật là tiếc.' 
             : 'Bạn đã chơi giỏi hơn DarkV, thật tuyệt vời!';
 
-        document.getElementById('result').innerText = `Chúc mừng! Bạn đã đoán đúng số: ${secretNumber}. ${resultText}`;
+        document.getElementById('result').innerText = `Chúc mừng! Bạn đã đoán đúng số: ${secretNumber}.\n${resultText}`;
         document.getElementById('attempts').innerText = `Số lần đoán: ${attempts}`;
     } else {
         document.getElementById('result').innerText = `Chữ số đúng vị trí: ${correctPosition}\nChữ số đúng nhưng không đúng vị trí: ${correctDigit}`;
@@ -104,3 +104,4 @@ function makeGuess() {
     // Xóa ô nhập dự đoán sau khi gửi
     guessInput.value = '';
 }
+
