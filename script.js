@@ -1,7 +1,7 @@
 let secretNumber = '';
 let attempts = 0;
 let numberLength = 0;
-const maxAttempts = 15;  // Số lần đoán tối đa để so sánh
+const maxAttempts = 13;  // Số lần đoán tối đa để so sánh
 
 function startGame() {
     numberLength = parseInt(document.getElementById('length').value);
