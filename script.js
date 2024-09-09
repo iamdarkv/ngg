@@ -94,7 +94,7 @@ function makeGuess() {
     // Cập nhật lịch sử dự đoán
     const historyList = document.getElementById('historyList');
     const historyItem = document.createElement('li');
-    historyItem.innerText = `Dự đoán ${attempts}: ${guess} - Chữ số đúng vị trí: ${correctPosition}, Chữ số đúng nhưng không đúng vị trí: ${correctDigit}`;
+    historyItem.innerText = `Dự đoán ${attempts}: ${guess} - Chữ số đúng vị trí: ${correctPosition}, Chữ số đúng nhưng sai vị trí: ${correctDigit}`;
     historyList.appendChild(historyItem);
 
     if (correctPosition === numberLength) {
