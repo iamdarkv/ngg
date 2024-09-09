@@ -1,14 +1,7 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+html, body {
+    height: 100%;
     margin: 0;
-    flex-direction: column; /* Thay đổi hướng của body để phần credit nằm dưới cùng */
-    font-size: 14px; /* Giảm kích thước font của toàn bộ trang */
+    overflow: auto; /* Cho phép cuộn trang khi nội dung vượt quá chiều cao màn hình */
 }
 
 .container {
@@ -17,64 +10,23 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-input {
-    padding: 5px; /* Giảm padding để thu nhỏ kích thước ô nhập */
-    font-size: 14px; /* Giảm kích thước font của ô nhập */
-    margin: 10px 0;
-    width: 100px; /* Giảm chiều rộng của ô nhập */
-}
-
-button {
-    padding: 8px 16px; /* Giảm padding để thu nhỏ kích thước button */
-    font-size: 14px; /* Giảm kích thước font của button */
-    border: none;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
+    max-width: 90%; /* Đảm bảo container không quá rộng */
+    margin: 20px auto; /* Căn giữa container và thêm khoảng cách ở trên/dưới */
 }
 
 .credit {
     margin-top: 20px;
     text-align: center;
-    font-size: 12px; /* Giảm kích thước font trong phần credit */
+    font-size: 12px;
     color: #666;
-}
-
-.credit a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.credit a:hover {
-    text-decoration: underline;
+    position: absolute;
+    bottom: 10px;
+    width: 100%; /* Đảm bảo phần credit luôn nằm ở cuối trang */
 }
 
 .history {
     margin: 20px 0;
     text-align: left;
-}
-
-.history h2 {
-    font-size: 16px; /* Giảm kích thước font trong phần lịch sử dự đoán */
-    margin-bottom: 10px;
-}
-
-.history ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.history li {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 8px;
-    margin-bottom: 5px;
-    border-radius: 4px;
+    max-height: 200px; /* Đặt giới hạn chiều cao cho lịch sử dự đoán để tránh tràn ra ngoài */
+    overflow-y: auto; /* Cho phép cuộn dọc nếu lịch sử quá dài */
 }
